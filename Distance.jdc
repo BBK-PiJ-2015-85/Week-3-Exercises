@@ -1,0 +1,20 @@
+class Point {
+	double x;
+	double y;
+}
+
+Point point1 = new Point();
+point1.x = 5.3;
+point1.y = 8.2;
+
+Point point2 = new Point();
+point2.x = 6.1;
+point2.y = 6.9;
+
+Point point3 = new Point();
+point3.x = 9.4;
+point3.y = 10.1;
+
+//find distance between point1 and point2
+double distance1 = Math.sqrt(((point1.x - point2.x) ** 2) + ((point1.y - point2.y) ** 2)));
+println (distance1);
