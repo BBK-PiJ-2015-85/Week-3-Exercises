@@ -36,4 +36,18 @@ Point upLeft;
 Point downRight;
 }
 
+//another way of doing the first 17 lines (more concise)-
 
+//Rectangle rectangle1 = new Rectangle();
+//rectangle1.upLeft = new Point();
+//rectangle1.downRight = new Point();
+
+//print ("Please enter point 1 X co-ordinate: ");
+//rectangle1.upLeft.x = readDouble();
+//print ("Please enter point 1 y co-ordinate: ");
+//rectangle1.upLeft.y = readDouble();
+
+//print ("Please enter point 2 X co-ordinate: ");
+//rectangle1.downRight.x = readDouble();
+//print ("Please enter point 2 y co-ordinate: ");
+//rectangle1.downRight.y = readDouble();
