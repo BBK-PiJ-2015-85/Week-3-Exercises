@@ -1,0 +1,57 @@
+//get point 1 co-ordinates
+Point point1 = new Point();
+print ("Please enter point 1 X co-ordinate: ");
+point1.x = readDouble();
+print ("Please enter point 1 Y co-ordinate: ");
+point1.y = readDouble();
+
+//get point 2 co-ordinates
+Point point2 = new Point();
+print ("Please enter point 2 X co-ordinate: ");
+point2.x = readDouble();
+print ("Please enter point 2 Y co-ordinate: ");
+point2.y = readDouble();
+
+//get point 3 co-ordinates
+Point point3 = new Point();
+print ("Please enter point 3 X co-ordinate: ");
+point3.x = readDouble();
+print ("Please enter point 3 Y co-ordinate: ");
+point3.y = readDouble();
+
+//get point 4 co-ordinates
+Point point4 = new Point();
+print ("Please enter point 4 X co-ordinate: ");
+point4.x = readDouble();
+print ("Please enter point 4 Y co-ordinate: ");
+point4.y = readDouble();
+
+//get point 5 co-ordinates
+Point point5 = new Point();
+print ("Please enter point 5 X co-ordinate: ");
+point5.x = readDouble();
+print ("Please enter point 5 Y co-ordinate: ");
+point5.y = readDouble();
+
+//define rectangle1
+Rectangle rectangle1 = new Rectangle();
+rectangle1.upLeft = point1;
+rectangle1.downRight = point2;
+
+//define rectangle2
+Rectangle rectangle2 = new Rectangle();
+rectangle2.upLeft = point3;
+rectangle2.downRight = point4;
+
+//determine if point5 is in rectangle1
+
+
+class Point {
+	double x;
+	double y;
+}
+
+class Rectangle {
+Point upLeft;
+Point downRight;
+}
