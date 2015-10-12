@@ -16,20 +16,9 @@ Rectangle rectangle1 = new Rectangle();
 rectangle1.upLeft = point1;
 rectangle1.downRight = point2;
 
-//calculate length of x axis side
-Double sideX;
-Double sideY;
-if (rectangle1.upLeft.x > rectangle1.downRight.x) {
-	sideX = rectangle1.upLeft.x - rectangle1.downRight.x;
-} else {
-	sideX = rectangle1.downRight.x - rectangle1.upLeft.x;
-}
-//calculate length of y axis side
-if (rectangle1.upLeft.y > rectangle1.downRight.y) {
-	sideY = rectangle1.upLeft.y - rectangle1.downRight.y;
-} else {
-	sideY = rectangle1.downRight.y - rectangle1.upLeft.y;
-}
+//calculate length of x axis side and y axis side
+Double sideX = rectangle1.downRight.x - rectangle1.upLeft.x;
+Double sideY = rectangle1.upLeft.y - rectangle1.downRight.y;
 
 //calculate area
 Double area = sideX * sideY;
