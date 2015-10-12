@@ -44,7 +44,29 @@ rectangle2.upLeft = point3;
 rectangle2.downRight = point4;
 
 //determine if point5 is in rectangle1
+boolean in1 = false;
+if (point5.x >= rectangle1.upLeft.x && point5.x <= rectangle1.downRight.x) {
+	if (point5.y >= rectangle1.downRight.y && point5.y <= rectangle1.upLeft.y) {
+		in1 = true;
+	}
+}
 
+//determine if point5 is in rectangle2
+boolan in2 = false;
+if (point5.x >= rectangle2.upLeft.x && point5.x <= rectangle2.downRight.x) {
+	if (point5.x >= rectangle2.downRight.y && point5.x <= rectangle2.upLeft.y) {
+		in2 = true;
+	}
+}
+
+//return information about where point5 lies
+if (in1 == true && in2 == true) {
+	println ("Point 5 is inside both rectangles!");
+} else if (in1 == true || in2 == true) {
+	prinln ("Point 5 is inside one rectangle!")	
+} else {
+	println ("Point 5 is outside both rectangles.")
+}
 
 class Point {
 	double x;
