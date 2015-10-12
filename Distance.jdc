@@ -1,20 +1,50 @@
+//get point 1 co-ordinates
+Point point1 = new Point();
+print ("Please enter point 1 X co-ordinate: ");
+point1.x = readDouble();
+print ("Please enter point 1 Y co-ordinate: ");
+point1.y = readDouble();
+
+//get point 2 co-ordinates
+Point point2 = new Point();
+print ("Please enter point 2 X co-ordinate: ");
+point2.x = readDouble();
+print ("Please enter point 2 Y co-ordinate: ");
+point2.y = readDouble();
+
+//get point 3 co-ordinates
+Point point3 = new Point();
+print ("Please enter point 3 X co-ordinate: ");
+point3.x = readDouble();
+print ("Please enter point 3 X co-ordinate: ");
+point3.y = readDouble();
+
+//find distance between point1 and point2
+double distance1and2 = Math.sqrt(((point1.x - point2.x) * (point1.x - point2.x)) + ((point1.y - point2.y) * (point1.y - point2.y)));
+println ("The distance between points 1 and 2 is " + distance1and2);
+
+//find distance between points 1 and 3
+double distance1and3 = Math.sqrt(((point1.x - point3.x) * (point1.x - point3.x)) + ((point1.y - point3.y) * (point1.y - point3.y)));
+println ("The distance between points 1 and 3 is " + distance1and3);
+
+//find distance between points 2 and 3
+double distance2and3 = Math.sqrt(((point2.x - point3.x) * (point2.x - point3.x)) + ((point2.y - point3.y) * (point2.y - point3.y)));
+println ("The distance between points 2 and 3 is " + distance2and3);
+
+//calculate which 2 points are closest
+if (distance1and2 < distance1and3) {
+	if (distance1and2 < distance2and3) {
+		println ("Points 1 and 2 are closest.");
+	} else {
+		println ("Points 2 and 3 are closest.");
+	}
+} else if (distance1and3 < distance2and3) {
+	println ("Points 1 and 3 are closest.");
+} else {
+	println ("Points 2 and 3 are closest.");
+}
+
 class Point {
 	double x;
 	double y;
 }
-
-Point point1 = new Point();
-point1.x = 5.3;
-point1.y = 8.2;
-
-Point point2 = new Point();
-point2.x = 6.1;
-point2.y = 6.9;
-
-Point point3 = new Point();
-point3.x = 9.4;
-point3.y = 10.1;
-
-//find distance between point1 and point2
-double distance1 = Math.sqrt(((point1.x - point2.x) ** 2) + ((point1.y - point2.y) ** 2)));
-println (distance1);
