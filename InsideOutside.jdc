@@ -1,0 +1,44 @@
+//get point 1 co-ordinates
+Point point1 = new Point();
+print ("Please enter point 1 X co-ordinate: ");
+point1.x = readDouble();
+print ("Please enter point 1 Y co-ordinate: ");
+point1.y = readDouble();
+
+//get point 2 co-ordinates
+Point point2 = new Point();
+print ("Please enter point 2 X co-ordinate: ");
+point2.x = readDouble();
+print ("Please enter point 2 Y co-ordinate: ");
+point2.y = readDouble();
+
+//get point 3 co-ordinates
+Point point3 = new Point();
+print ("Please enter point 3 X co-ordinate: ");
+point3.x = readDouble();
+print ("Please enter point 3 Y co-ordinate: ");
+point3.y = readDouble();
+
+Rectangle rectangle1 = new Rectangle();
+rectangle1.upLeft = point1;
+rectangle1.downRight = point2;
+
+//determine if point3 falls within the x axis
+if (point3.x >= rectangle1.upLeft.x && point3.x <= rectangle1.downRight.x) {
+	if (point3.y >= rectangle1.downRight.y && point3.y <= rectangle1.upLeft.y) {
+		println ("Point 3 falls within the rectangle!");
+	}
+} else {
+	println ("Point 3 does not fall within the rectangle.");
+}
+
+
+class Point {
+	double x;
+	double y;
+}
+
+class Rectangle {
+Point upLeft;
+Point downRight;
+}
