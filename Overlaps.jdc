@@ -1,0 +1,75 @@
+//define rectangle1
+Rectangle rectangle1 = new Rectangle();
+rectangle1.upLeft = new Point();
+rectangle1.downRight = new Point();
+
+//define rectangle2
+Rectangle rectangle2 = new Rectangle();
+rectangle2.upLeft = new Point();
+rectangle2.downRight = new Point();
+
+//get point 1 co-ordinates
+print ("Please enter point 1 X co-ordinate: ");
+rectangle1.upLeft.x = readDouble();
+print ("Please enter point 1 Y co-ordinate: ");
+rectangle1.upLeft.y = readDouble();
+
+//get point 2 co-ordinates
+print ("Please enter point 2 X co-ordinate: ");
+rectangle1.downRight.x = readDouble();
+print ("Please enter point 2 Y co-ordinate: ");
+rectangle1.downRight.y = readDouble();
+
+//get point 3 co-ordinates
+print ("Please enter point 3 X co-ordinate: ");
+rectangle2.upLeft.x = readDouble();
+print ("Please enter point 3 Y co-ordinate: ");
+rectangle2.upLeft.y = readDouble();
+
+//get point 4 co-ordinates
+print ("Please enter point 4 X co-ordinate: ");
+rectangle2.downRight.x = readDouble();
+print ("Please enter point 4 Y co-ordinate: ");
+rectangle2.downRight.y = readDouble();
+
+//get point 5 co-ordinates
+Point point5 = new Point();
+print ("Please enter point 5 X co-ordinate: ");
+point5.x = readDouble();
+print ("Please enter point 5 Y co-ordinate: ");
+point5.y = readDouble();
+
+//determine if point5 is in rectangle1
+boolean in1 = false;
+if (point5.x >= rectangle1.upLeft.x && point5.x <= rectangle1.downRight.x) {
+	if (point5.y >= rectangle1.downRight.y && point5.y <= rectangle1.upLeft.y) {
+		in1 = true;		
+	}
+}
+
+//determine if point5 is in rectangle2
+boolean in2 = false;
+if (point5.x >= rectangle2.upLeft.x && point5.x <= rectangle2.downRight.x) {
+	if (point5.y >= rectangle2.downRight.y && point5.y <= rectangle2.upLeft.y) {
+		in2 = true;		
+	}
+}
+
+//return information about where point5 lies
+if (in1 == true && in2 == true) {
+	println ("Point 5 is inside both rectangles!");
+} else if (in1 == true || in2 == true) {
+	println ("Point 5 is inside one rectangle!");
+} else {
+	println ("Point 5 is outside both rectangles.");
+}
+
+class Point {
+	double x;
+	double y;
+}
+
+class Rectangle {
+Point upLeft;
+Point downRight;
+}
