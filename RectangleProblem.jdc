@@ -1,0 +1,53 @@
+//get 1st point co-ordinates
+Point point1 = new Point();
+print ("Please enter point 1 X co-ordinate: ");
+point1.x = readDouble();
+print ("Please enter point 1 Y co-ordinate: ");
+point1.y = readDouble();
+
+//get 2nd point co-ordinates
+Point point2 = new Point();
+print ("Please enter point 2 X co-ordinate: ");
+point2.x = readDouble();
+print ("Please enter point 2 Y co-ordinate: ");
+point2.y = readDouble();
+
+Rectangle rectangle1 = new Rectangle();
+rectangle1.upLeft = point1;
+rectangle1.downRight = point2;
+
+//calculate length of x axis side and y axis side
+Double sideX = rectangle1.downRight.x - rectangle1.upLeft.x;
+Double sideY = rectangle1.upLeft.y - rectangle1.downRight.y;
+
+//calculate area
+Double area = sideX * sideY;
+
+println ("The area of the rectangle is " + area);
+
+
+class Point {
+	double x;
+	double y;
+}
+
+class Rectangle {
+Point upLeft;
+Point downRight;
+}
+
+//another way of doing the first 17 lines (more concise)-
+
+//Rectangle rectangle1 = new Rectangle();
+//rectangle1.upLeft = new Point();
+//rectangle1.downRight = new Point();
+
+//print ("Please enter point 1 X co-ordinate: ");
+//rectangle1.upLeft.x = readDouble();
+//print ("Please enter point 1 y co-ordinate: ");
+//rectangle1.upLeft.y = readDouble();
+
+//print ("Please enter point 2 X co-ordinate: ");
+//rectangle1.downRight.x = readDouble();
+//print ("Please enter point 2 y co-ordinate: ");
+//rectangle1.downRight.y = readDouble();
