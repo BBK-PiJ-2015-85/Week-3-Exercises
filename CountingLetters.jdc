@@ -1,0 +1,22 @@
+print ("Please enter some text: ");
+String str = readLine();
+int strLength = str.length();
+int count = 0;
+for (int i = 0; i < strLength; i++) {
+	if (str.substring(i, i+1).equals("e") || str.substring(i, i+1).equals("E")) {
+		count++;
+	}
+}
+println ("There were " + count + " letters \"e\" in that text.");
+println();
+
+//part b
+println ("Please enter which letter you would like me to count: ");
+String letter = readLine();
+count = 0;
+for (int i = 0; i < strLength; i++) {
+	if (str.substring(i, i+1).equals(letter)) {
+		count++;
+	}
+}
+println ("There were " + count + " letters " + letter + " in that text.");
