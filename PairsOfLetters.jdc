@@ -1,0 +1,18 @@
+print ("Please enter some text: ");
+String shortStr = readLine();
+print ("Please enter some more: ");
+String str = readLine();
+int strLength = str.length();
+int shortStrLength = shortStr.length();
+int count = 0;
+for (int i = 0; i < strLength; i++) {
+	if (str.substring(i, i+1).equals(shortStr.substring(0, 1))) {
+		if (i + shortStrLength <= strLength){
+			if (str.substring(i, i + shortStrLength).equals(shortStr)){
+				count++;
+			}
+		}
+	}
+}
+
+println (shortStr + " occurs " + count + " times in " + str);
