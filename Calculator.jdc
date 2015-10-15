@@ -1,20 +1,31 @@
 println ("Please enter a number: ");
-double num1 = Double.parseDouble(readLine());
+String str = readLine();
+double num1 = Double.parseDouble(str);
 println ("Please enter another: ");
-double num2 = Double.parseDouble(readLine());
+str = readLine();
+double num2 = Double.parseDouble(str);
 double result = 0;
-println ("Please select the operation +, -, x or / : ");
+boolean finished = false;
+print ("Please select the operation +, -, x or / : ");
 String operation = readLine();
-if (operation == "+") {
-	result = num1 + num2;
-} else if (operation == "-") {
-	result = num1 - num2;
-} else if (operation == "x") {
-	result = num1 * num2;
-} else if (operation == "/") {
-	result = num1 / num2;
-} else {
-	println ("Invalid operation entered");
+while (!finished) {	
+	if (operation.equals("+")) {
+		result = num1 + num2;
+		finished = true;
+	} else if (operation.equals("-")) {
+		result = num1 - num2;
+		finished = true;
+	} else if (operation.equals("x")) {
+		result = num1 * num2;
+		finished = true;
+	} else if (operation.equals("/")) {
+		result = num1 / num2;
+		finished = true;
+	} else {
+		print ("Invalid operation entered. Please enter another: ");
+		operation = readLine();
+	}
 }
 println (num1 + " " + operation + " " + num2 + " " + "=" + " " + result);
+
 
