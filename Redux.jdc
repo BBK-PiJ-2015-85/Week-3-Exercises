@@ -1,0 +1,29 @@
+println("Please enter some text: ");
+String str = readLine();
+String letter = "";
+int count = 0;
+String used = "";
+boolean finished = false;
+while (!finished){
+	println ("Please enter which letter you would like me to count: ");
+	letter = readLine();
+	for (int n = 0; n < used.length(); n++){
+		if (used.substring(n, n+1).equals(letter)){
+			finished = true;
+			break;
+		}
+	}
+	if (!finished){
+		for (int i = 0; i < str.length(); i++) {
+			if (str.substring(i, i+1).equals(letter)) {
+				count++;
+			}	
+		}
+	
+		println ("There were " + count + " letters " + letter + " in that text.");
+		count = 0;
+		used = used + letter;
+	}
+}
+println("Repeated character, exiting program....");
+
