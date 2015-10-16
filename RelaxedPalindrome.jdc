@@ -1,0 +1,38 @@
+print ("Please enter some text: ");
+String str = readLine();
+char char1;
+char char2;
+boolean palindrome = true;
+int marker = 0;
+String withoutPunctuation = "";
+String lowerCase = "";
+
+//remove punctuation and spaces
+for (int n = 0; n < str.length(); n++){
+	char1 = str.charAt(n);
+	marker = n + 1;
+	if (Character.isLetter(char1)){
+		withoutPunctuation = withoutPunctuation + str.substring(n, marker);
+	}
+}
+
+//change to all lower case
+for (int x = 0; x < withoutPunctuation.length(); x++){
+	lowerCase = lowerCase + Character.toLowerCase(withoutPunctuation.charAt(x));
+}
+
+marker = lowerCase.length() - 1;
+for (int i = 0; i < lowerCase.length() / 2; i++) {
+	char1 = lowerCase.charAt(i);
+	char2 = lowerCase.charAt(marker);
+	if (char1 != char2) {
+		palindrome = false;
+		break;
+	}
+	marker --;
+}
+if (palindrome) {
+	println ("That is a realxed palindrome!");
+} else {
+	println("That is not a relaxed palindrome.");
+}
